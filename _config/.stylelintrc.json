@@ -1,0 +1,119 @@
+{
+	"plugins": [
+		"stylelint-scss"
+	],
+	"rules": {
+		"color-no-invalid-hex": true,
+		"function-calc-no-unspaced-operator": true,
+		"string-no-newline": true,
+		"unit-no-unknown": true,
+		"block-no-empty": true,
+		"shorthand-property-no-redundant-values": true,
+		"max-nesting-depth": [4, { "ignore": ["pseudo-classes"] }],
+		"color-hex-case": "lower",
+		"color-hex-length": "long",
+		"number-leading-zero": "always",
+		"number-no-trailing-zeros": true,
+		"string-quotes": "single",
+		"unit-case": "lower",
+		"length-zero-no-unit": true,
+		"value-keyword-case": "lower",
+
+		"declaration-bang-space-after": "never",
+		"declaration-bang-space-before": "always",
+		"declaration-colon-newline-after": "always-multi-line",
+		"declaration-colon-space-after": "always",
+		"declaration-colon-space-before": "never",
+		"declaration-empty-line-before": ["never", { "except": ["after-comment"], "ignore": ["after-comment"] }],
+
+		"declaration-block-semicolon-newline-after": "always-multi-line",
+		"declaration-block-semicolon-newline-before": "never-multi-line",
+		"declaration-block-semicolon-space-after": "always-single-line",
+		"declaration-block-semicolon-space-before": "never",
+		"declaration-block-trailing-semicolon": "always",
+
+		"block-closing-brace-empty-line-before": "never",
+		"block-closing-brace-newline-after": "always",
+		"block-closing-brace-newline-before": "always",
+		"block-closing-brace-space-after": "always-single-line",
+
+		"selector-attribute-brackets-space-inside": "never",
+		"selector-attribute-operator-space-after": "never",
+		"selector-attribute-operator-space-before": "never",
+		"selector-attribute-quotes": "always",
+		"selector-combinator-space-after": "always",
+		"selector-descendant-combinator-no-non-space": true,
+		"selector-pseudo-class-case": "lower",
+		"selector-pseudo-class-parentheses-space-inside": "never",
+		"selector-pseudo-element-case": "lower",
+		"selector-pseudo-element-colon-notation": "single",
+		"selector-type-case": "lower",
+
+		"selector-list-comma-newline-after": "always",
+		"selector-list-comma-newline-before": "always-multi-line",
+		"selector-list-comma-space-after": "never-single-line",
+		"selector-list-comma-space-before": "always-single-line",
+
+		"rule-empty-line-before": ["always-multi-line", { "except": ["after-single-line-comment", "first-nested"], "ignore": ["after-comment", "first-nested"] }],
+
+		"media-feature-colon-space-after": "always",
+		"media-feature-colon-space-before": "never",
+		"media-feature-name-case": "lower",
+		"media-feature-parentheses-space-inside": "never",
+		"media-feature-range-operator-space-after": "always",
+		"media-feature-range-operator-space-before": "always",
+
+		"media-query-list-comma-newline-after": "never-multi-line",
+		"media-query-list-comma-newline-before": "never-multi-line",
+		"media-query-list-comma-space-after": "always-single-line",
+		"media-query-list-comma-space-before": "never-single-line",
+
+		"at-rule-empty-line-before": ["always", { "ignore": ["after-comment", "first-nested"] }],
+		"at-rule-name-case": "lower",
+		"at-rule-name-newline-after": "always-multi-line",
+		"at-rule-name-space-after": "always-single-line",
+		"at-rule-semicolon-newline-after": "always",
+		"at-rule-semicolon-space-before": "never",
+
+		"comment-empty-line-before": ["never", { "except": ["first-nested"], "ignore": ["after-comment", "stylelint-commands"] }],
+		"comment-whitespace-inside": "always",
+
+		"indentation": "tab",
+		"linebreaks": "unix",
+		"max-empty-lines": 1,
+		"no-eol-whitespace": true,
+		"no-missing-end-of-source-newline": true,
+		"no-empty-first-line": true,
+
+		"scss/at-else-closing-brace-newline-after": "always-last-in-chain",
+		"scss/at-else-closing-brace-space-after": "never-intermediate",
+		"scss/at-else-empty-line-before": "never",
+		"scss/at-else-if-parentheses-space-before": "always",
+
+		"scss/at-extend-no-missing-placeholder": true,
+		"scss/at-function-named-arguments": ["always", { "ignore": ["single-argument"], "ignoreFunctions": ["breakpoint", "rem-calc", "percentage"] }],
+		"scss/at-function-parentheses-space-before": "never",
+
+		"scss/at-if-closing-brace-newline-after": "always-last-in-chain",
+
+		"scss/at-mixin-argumentless-call-parentheses": "always",
+		"scss/at-mixin-named-arguments": ["always", { "ignore": ["single-argument"]}],
+		"scss/at-mixin-parentheses-space-before": "never",
+
+		"scss/dollar-variable-colon-space-after": "always",
+		"scss/dollar-variable-colon-space-before": "never",
+
+		"scss/dollar-variable-empty-line-before": "never",
+		"scss/dollar-variable-no-missing-interpolation": true,
+
+		"scss/double-slash-comment-whitespace-inside": "always",
+		"scss/declaration-nested-properties": "never",
+
+		"scss/operator-no-newline-after": true,
+		"scss/operator-no-newline-before": true,
+		"scss/operator-no-unspaced": true,
+
+		"scss/selector-no-redundant-nesting-selector": true
+
+	}
+}

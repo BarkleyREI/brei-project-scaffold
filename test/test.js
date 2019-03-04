@@ -52,6 +52,8 @@ describe('Verify file and folder structure', function () {
 		let ttree = util.tree(root);
 
 		let files = util.ftree(ttree);
+		
+		console.log(files);
 
 		util.assert(util.deep(valid, files));
 

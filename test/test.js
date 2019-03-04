@@ -8,7 +8,6 @@ const u = require('util');
 const root = __dirname + '/..';
 
 let valid = [
-	'.gitignore',
 	'README.md',
 	{
 		_config:

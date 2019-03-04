@@ -1,6 +1,6 @@
 # Webpack
 
-`yarn` or `yarn install`
+`npm install`
 
 ## Commands
 
@@ -10,4 +10,3 @@
 
 `npm run build` - Run a plain build
 
-- 

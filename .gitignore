@@ -11,8 +11,11 @@ node_modules
 .stylelintcache
 
 # Generated directories and files
-src/css
-src/js
-src/modules
-src/*.html
+app/css
+app/js
+app/modules
+app/*.html
 dist
+
+# Lock
+package-lock.json

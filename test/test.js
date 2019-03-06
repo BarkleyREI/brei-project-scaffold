@@ -19,6 +19,7 @@ let valid = [
 				'postcss.config.js',
 				'webpack.config.js']
 	},
+	'_package.json',
 	{
 		app: [
 			{ assemble: [] },
@@ -53,7 +54,7 @@ describe('Verify file and folder structure', function () {
 
 		let files = util.ftree(ttree);
 		
-		console.log(u.inspect(files, false, null));
+		// console.log(u.inspect(files, false, null));
 
 		util.assert(util.deep(valid, files));
 

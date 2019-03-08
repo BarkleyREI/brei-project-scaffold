@@ -3,7 +3,7 @@
 'use strict';
 
 const util = require('brei-util');
-const u = require('util');
+// const u = require('util');
 
 const root = __dirname + '/..';
 
@@ -19,7 +19,6 @@ let valid = [
 				'postcss.config.js',
 				'webpack.config.js']
 	},
-	'_package.json',
 	{
 		app: [
 			{ assemble: [] },
@@ -53,7 +52,7 @@ describe('Verify file and folder structure', function () {
 		let ttree = util.tree(root);
 
 		let files = util.ftree(ttree);
-		
+
 		// console.log(u.inspect(files, false, null));
 
 		util.assert(util.deep(valid, files));

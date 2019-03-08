@@ -74,7 +74,6 @@
 		"server": "npm run scaffold && browser-sync start --config ./_config/bs.config.js && npm run watch",
 		"scaffold": "npm run assemble && npm run modernizr",
 		"test": "mocha",
-		"preinstall": "rm -Rf _package.json && cp package.json _package.json",
 		"postinstall": "npm test"
 	},
 	"author": "BarkleyREI",

@@ -53,9 +53,16 @@ describe('Verify file and folder structure', function () {
 
 		let files = util.ftree(ttree);
 
+		// console.log('\n------- files --------\n');
 		// console.log(u.inspect(files, false, null));
+		//
+		// console.log('\n------- valid --------\n');
+		// console.log(u.inspect(valid, false, null));
+		//
+		// console.log('\n------- test --------\n');
+		// console.log(u.inspect(util.deepNotOnly(valid, files), false, null));
 
-		util.assert(util.deep(valid, files));
+		util.assert(util.deep(util.deepNotOnly(valid, files), {}));
 
 	});
 

@@ -38,7 +38,7 @@ let valid = [
 		]
 	},
 	{
-		lib: ['updateScss.js']
+		lib: []
 	},
 	'package.json',
 	{

@@ -2,12 +2,14 @@
 
 'use strict';
 
-const util = require('brei-util');
+// const util = require('brei-util');
+const util = require('../../brei-util/index.js');
 const u = require('util');
 
 const root = __dirname + '/..';
 
 let valid = [
+	'.gitignore',
 	'README.md',
 	{
 		_config:

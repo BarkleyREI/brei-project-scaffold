@@ -1,13 +1,14 @@
 module.exports = (file, options, env) => {
-
-	console.log('hello', file, options, env);
+	'use strict';
 
 	let config = {
 		plugins: {}
 	};
 
 	if (typeof file.env !== 'undefined' && file.env === 'scss') {
-		// config.parser = require('postcss-sass');
+
+		config.syntax = 'postcss-scss';
+
 		config.plugins = {
 			'postcss-sorting': {
 				'order': [
@@ -25,8 +26,27 @@ module.exports = (file, options, env) => {
 				'properties-order': 'alphabetical'
 			}
 		};
+
 	} else {
+
 		config.plugins = {
+			'postcss-pxtorem': {
+				mediaQuery: true,
+				propList: [
+					'bottom',
+					'font',
+					'font-size',
+					'height',
+					'left',
+					'letter-spacing',
+					'line-height',
+					'margin*',
+					'max-*',
+					'padding*',
+					'top',
+					'width'
+				]
+			},
 			'autoprefixer': {
 				browsers: [
 					'> 5% in US',
@@ -39,6 +59,7 @@ module.exports = (file, options, env) => {
 			},
 			'cssnano': false
 		};
+
 	}
 
 	return config;

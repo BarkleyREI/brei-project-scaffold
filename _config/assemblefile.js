@@ -29,6 +29,8 @@ app.task('load', function (cb) {
 	app.pages(_dir + '../app/assemble/*.hbs');
 	app.modules(_dir + '../app/assemble/modules/*.hbs');
 
+	app.option('layout', 'default.hbs');
+
 	cb();
 });
 

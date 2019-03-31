@@ -2,8 +2,7 @@
 
 'use strict';
 
-// const util = require('brei-util');
-const util = require('../../brei-util/index.js');
+const util = require('brei-util');
 const u = require('util');
 
 const root = __dirname + '/..';
@@ -17,14 +16,15 @@ let valid = [
 				'.stylelintignore',
 				'_brei.json',
 				'assemblefile.js',
-				'bs.config.js',
+				'copy.js',
+				'del.js',
 				'modernizr-config.json',
 				'postcss.config.js',
 				'webpack.config.js']
 	},
 	{
 		app: [
-			{ assemble: [] },
+			{ assemble: [ '.gitkeep' ] },
 			{
 				ejs: [
 					{
@@ -35,12 +35,17 @@ let valid = [
 					'main.js'
 				]
 			},
-			{ img: [] },
-			{ scss: [] },
+			{ img: [ '.gitkeep' ] },
+			{ scss: [ '.gitkeep' ] },
 		]
 	},
 	{
-		lib: []
+		lib: [
+			'browsersync.js',
+			'copy.js',
+			'del.js',
+			'nodesass.js'
+		]
 	},
 	'package.json',
 	{
@@ -48,24 +53,26 @@ let valid = [
 	}
 ];
 
-describe('Verify file and folder structure', function () {
+describe('brei-project-scaffold -- Verify file and folder structure', function () {
 
 	it('Deep object comparison check', function () {
 
 		let ttree = util.tree(root);
 
-		let files = util.ftree(ttree);
+		let actual = util.ftree(ttree);
 
-		console.log('\n------- files --------\n');
-		console.log(u.inspect(files, false, null));
+		let expected = util.filterObject(valid);
+
+		console.log('\n------- actual --------\n');
+		console.log(u.inspect(actual, false, null));
 
 		console.log('\n------- valid --------\n');
-		console.log(u.inspect(valid, false, null));
+		console.log(u.inspect(expected, false, null));
 
-		console.log('\n------- test --------\n');
-		console.log(u.inspect(util.deepNotOnly(valid, files), false, null));
+		// console.log('\n------- test --------\n');
+		// console.log(u.inspect(util.deepNotOnly(actual, expected), false, null));
 
-		util.assert(util.deep(util.deepNotOnly(files, valid), {}));
+		util.assert(util.deep(util.deepNotOnly(actual, expected), {}));
 
 	});
 

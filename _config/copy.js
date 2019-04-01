@@ -1,11 +1,17 @@
 const config = require('./_brei.json');
 
+const root = __dirname + '/..';
+
+const app = root + '/' + config.app;
+const dist = root + '/' + config.dist;
+const deploy = root + '/' + config.deploy;
+
 exports = module.exports = {
 	'css': [
 		{
-			'cwd': config.app,
+			'cwd': app,
 			'dot': true,
-			'dest': '../' + config.dist,
+			'dest': dist,
 			'src': [
 				'css/**/*'
 			]
@@ -13,9 +19,9 @@ exports = module.exports = {
 	],
 	'dist': [
 		{
-			'cwd': config.app,
+			'cwd': app,
 			'dot': true,
-			'dest': '../' + config.dist,
+			'dest': dist,
 			'src': [
 				'modules/*.html',
 				'*.html'
@@ -24,12 +30,12 @@ exports = module.exports = {
 	],
 	'deploy': [
 		{
-			'cwd': config.dist,
+			'cwd': dist,
 			'dot': true,
 			'src': [
 				'**'
 			],
-			'dest': config.deploy
+			'dest': deploy
 		}
 	]
 };

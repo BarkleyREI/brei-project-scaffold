@@ -26,6 +26,14 @@ exports = module.exports = {
 				'modules/*.html',
 				'*.html'
 			]
+		},
+		{
+			'cwd': app,
+			'dot': true,
+			'dest': dist,
+			'src': [
+				'js/**/*'
+			]
 		}
 	],
 	'deploy': [

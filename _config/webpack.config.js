@@ -69,7 +69,7 @@ module.exports = (env, argv) => {
 	}
 
 	if (argv.mode === 'production') {
-		config.output.path = path.resolve(projectDir, 'dist/js');
+		// config.output.path = path.resolve(projectDir, 'dist/js');
 		config.optimization = {
 			minimizer: [
 				new UglifyJsPlugin({

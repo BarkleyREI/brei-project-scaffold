@@ -5,8 +5,8 @@ exports = module.exports = {
 		{
 			'cwd': config.app,
 			'src': [
-				'modules/*.hbs',
-				'*.hbs'
+				'modules/*.html',
+				'*.html'
 			]
 		}
 	],

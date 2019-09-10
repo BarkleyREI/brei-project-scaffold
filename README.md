@@ -22,7 +22,7 @@ Stash Repo: <%= stashrepo %>
 
 **Assemble Helpers**: <%= helperversion %>
 
-## Webpack
+## NPM Scripts
 
 `npm install`
 
@@ -34,8 +34,11 @@ Stash Repo: <%= stashrepo %>
 
 `npm run build` - Run a plain build
 
-## Tasks
+### Deployment
 
+`npm run deploy` - Clone `dist/` into appropriate deployment directories
+
+## Tasks
 
 ### assemble
 
@@ -138,52 +141,81 @@ Stash Repo: <%= stashrepo %>
 
 - Runs postcss script using congfiguration (_config/postcss.config.js) on css file in dist directory. This is using the scss configuration. 
 - PostCSS plugins: 
+    - [postcss-sorting](https://github.com/hudochenkov/postcss-sorting) - Sorts rules in SCSS.
 
 ### postcss:postprocess
 
 `postcss --config _config/ -r dist/css/main.css --env=css`
 
-- Runs postcss script using congfiguration (_config/postcss.config.js) on css file in dist directory. This is using the scss configuration. 
+- Runs postcss script using congfiguration (_config/postcss.config.js) on css file in dist directory. This is using the css configuration. 
 - PostCSS plugins: 
+    - [postcss-pxtorem](https://github.com/cuth/postcss-pxtorem) - Converts px values to rem values.
+    - [autoprefixer](https://github.com/postcss/autoprefixer) - Adds vendor prefixes based on browser requirements.
+    - [cssnano](https://github.com/cssnano/cssnano) - Minifies CSS.
 
 ### postcss:preprocess
 
 `postcss --config _config/ -r app/css/main.css --env=css`
 
-- Runs postcss script using congfiguration (_config/postcss.config.js) on css file in dist directory. This is using the scss configuration. 
+- Runs postcss script using congfiguration (_config/postcss.config.js) on css file in app directory. This is using the css configuration. 
 - PostCSS plugins: 
-
+    - [postcss-pxtorem](https://github.com/cuth/postcss-pxtorem) - Converts px values to rem values.
+    - [autoprefixer](https://github.com/postcss/autoprefixer) - Adds vendor prefixes based on browser requirements.
+    - [cssnano](https://github.com/cssnano/cssnano) - Minifies CSS.
+    
 ### preprocess
 
 `npm run preprocess:css && npm run preprocess:js && npm run modernizr`
+
+- Runs CSS Preprocessing task.
+- Runs JS Preprocessing task.
+- Runs modernizr taskk.
 
 ### preprocess:css
 
 `npm run sass:build && npm run postcss:preprocess`
 
+- Runs Sass Build task.
+- Runs Postcss Preprocess task.
+
 ### preprocess:js
 
 `npx webpack --config ./_config/webpack.config.js`
+
+- Compiles ES6 JavaScript using Webpack configuration.
 
 ### sass:build
 
 `node lib/nodesass.js`
 
+- Compiles SCSS using nodesass configuration.
+
 ### sass:dist
 
 `node lib/copy.js --css`
+
+- Copies CSS from app to dist.
 
 ### sass:lint
 
 `npm run postcss:fixsass && stylelint \"app/scss/**/*.scss\" --fix --cache --cache-location \"./.stylelintcache/\" --config \"./_config/.stylelintrc.json\" --ignore-path \"./_config/.stylelintignore\"`
 
+- Runs Postcss Fixsass task.
+- Lints the SCSS files based on defined stylelint rules.
+
 ### scaffold
 
 `npm run assemble && npm run modernizr`
 
+- Runs Assemble tasks
+- Runs modernizr task
+
 ### start
 
 `npm run scaffold && node lib/browsersync.js`
+
+- Runs scaffold task
+- Starts a server on port 3000 (or first available port) and opens in a new tab using default browser.
 
 ### test
 

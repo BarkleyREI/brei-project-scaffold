@@ -54,7 +54,7 @@
 	},
 	"scripts": {
 		"assemble": "npm run clean:assemble && npm run assemble:build && npm run assemble:execute",
-		"assemble:build": "assemble default modules --file _config/assemblefile.js",
+		"assemble:build": "assemble default organisms --file _config/assemblefile.js",
 		"assemble:execute": "node lib/updateScss.js",
 		"build": "npm run clean:dist && npm run scaffold && npm run build:css && npm run build:img && npm run build:js && npm run copy",
 		"build:css": "npm run sass:lint && npm run sass:build && npm run postcss:preprocess && npm run sass:dist && npm run postcss:postprocess",

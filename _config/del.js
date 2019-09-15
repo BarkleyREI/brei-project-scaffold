@@ -5,7 +5,7 @@ exports = module.exports = {
 		{
 			'cwd': config.app,
 			'src': [
-				'modules/*.html',
+				'components/*.html',
 				'*.html'
 			]
 		}
@@ -25,7 +25,7 @@ exports = module.exports = {
 				'css/**/*',
 				'js/**/*',
 				'img/**/*',
-				'modules/*.html',
+				'components/*.html',
 				'*.html'
 			]
 		}

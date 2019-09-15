@@ -11,7 +11,7 @@ app.use(assembleHelpers());
 
 app.task('load', function (cb) {
 	app.create('includes', {viewType: 'partial'});
-	app.create('modules', {viewType: 'renderable'});
+	app.create('organisms', {viewType: 'renderable'});
 
 	app.helpers([
 		'handlebars-helpers/lib',
@@ -20,14 +20,15 @@ app.task('load', function (cb) {
 
 	app.partials([
 		_dir + '../app/assemble/includes/*.hbs',
-		_dir + '../app/assemble/partials/*.hbs',
-		_dir + '../app/assemble/modules/*.hbs'
+		_dir + '../app/assemble/molecules/*.hbs',
+		_dir + '../app/assemble/organisms/*.hbs',
+		_dir + '../app/assemble/atoms/*.hbs'
 	]);
 
 	app.layouts(_dir + '../app/assemble/layouts/*.hbs');
 
 	app.pages(_dir + '../app/assemble/*.hbs');
-	app.modules(_dir + '../app/assemble/modules/*.hbs');
+	app.organisms(_dir + '../app/assemble/organisms/*.hbs');
 
 	app.option('layout', 'default.hbs');
 
@@ -43,12 +44,12 @@ app.task('default', ['load'], function () {
 
 });
 
-app.task('modules', ['load'], function () {
+app.task('organisms', ['load'], function () {
 
-	return app.toStream('modules')
+	return app.toStream('organisms')
 		.pipe(app.renderFile())
 		.pipe(extname({ext: '.html'}))
-		.pipe(app.dest('app/modules'));
+		.pipe(app.dest('app/components'));
 
 });
 

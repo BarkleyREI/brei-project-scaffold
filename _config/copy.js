@@ -23,7 +23,7 @@ exports = module.exports = {
 			'dot': true,
 			'dest': dist,
 			'src': [
-				'modules/*.html',
+				'components/*.html',
 				'*.html'
 			]
 		},

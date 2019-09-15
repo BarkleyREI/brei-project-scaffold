@@ -8,6 +8,7 @@ const u = require('util');
 const root = __dirname + '/..';
 
 let valid = [
+	'.travis.yml',
 	'.gitignore',
 	'README.md',
 	{

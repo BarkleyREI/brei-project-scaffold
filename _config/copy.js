@@ -34,6 +34,22 @@ exports = module.exports = {
 			'src': [
 				'js/**/*'
 			]
+		},
+		{
+			'cwd': app,
+			'dot': true,
+			'dest': dist,
+			'src': [
+				'**',
+				'!assemble/**/*',
+				'!css/**/*',
+				'!ejs/**/*',
+				'!js/**/*',
+				'!img/**/*',
+				'!scss/**/*',
+				'!components/*.html',
+				'!*.html'
+			]
 		}
 	],
 	'deploy': [

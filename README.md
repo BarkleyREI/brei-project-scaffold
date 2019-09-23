@@ -62,10 +62,11 @@ Stash Repo: <%= stashrepo %>
 
 ### build
 
-`npm run clean:dist && npm run scaffold && npm run build:css && npm run build:img && npm run build:js && npm run copy`
+`npm run clean:dist && npm run scaffold && npm run check && npm run build:css && npm run build:img && npm run build:js && npm run copy`
 
 - Cleans up the dist folder.
 - Runs the assemble tasks and modernizr tasks. (scaffold) 
+- Runs lint checks for SASS and ES6 (check)
 - Runs the CSS build tasks. (build:css)
 - Runs the IMG build tasks. (build:img)
 - Runs the JavaScript build tasks. (build:js)
@@ -73,9 +74,8 @@ Stash Repo: <%= stashrepo %>
 
 ### build:css
 
-`npm run sass:lint && npm run sass:build && npm run postcss:preprocess && npm run sass:dist && npm run postcss:postprocess`
+`npm run sass:build && npm run postcss:preprocess && npm run sass:dist && npm run postcss:postprocess`
 
-- Runs Sass linting task. (sass:lint)
 - Runs Sass build task. (sass:build)
 - Runs PostCSS build task. (postcss:build)
 

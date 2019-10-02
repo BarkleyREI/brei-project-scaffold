@@ -8,6 +8,13 @@ const u = require('util');
 const root = __dirname + '/..';
 
 let valid = [
+	{
+		'.github': [
+			'CONTRIBUTING.md',
+			'ISSUE_TEMPLATE.md',
+			'PULL_REQUEST_TEMPLATE.md'
+		]
+	},
 	'.travis.yml',
 	'.gitignore',
 	'README.md',

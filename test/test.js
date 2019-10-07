@@ -37,6 +37,7 @@ let valid = [
 				ejs: [
 					{
 						lib: [
+							'foundation.js',
 							'jquery.js'
 						]
 					},

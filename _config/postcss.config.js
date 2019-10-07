@@ -7,6 +7,8 @@ module.exports = (file, options, env) => {
 
 	if (typeof file.env !== 'undefined' && file.env === 'scss') {
 
+		// Scss Processing
+
 		config.syntax = 'postcss-scss';
 
 		config.plugins = {
@@ -27,7 +29,26 @@ module.exports = (file, options, env) => {
 			}
 		};
 
+	} else if (typeof file.env !== 'undefined' && file.env === 'csspre') {
+
+		// CSS Pre-processing
+
+		config.plugins = {
+			'autoprefixer': {
+				browsers: [
+					'> 5% in US',
+					'last 2 versions',
+					'Firefox ESR',
+					'IE >= 8',
+					'iOS >= 8'
+				],
+				remove: false
+			}
+		};
+
 	} else {
+
+		// CSS Post-processing
 
 		config.plugins = {
 			'postcss-pxtorem': {
@@ -47,17 +68,7 @@ module.exports = (file, options, env) => {
 					'width'
 				]
 			},
-			'autoprefixer': {
-				browsers: [
-					'> 5% in US',
-					'last 2 versions',
-					'Firefox ESR',
-					'IE >= 8',
-					'iOS >= 8'
-				],
-				remove: false
-			},
-			'cssnano': false
+			'cssnano': true
 		};
 
 	}

@@ -29,7 +29,7 @@
 		"eslint-loader": "2.1.1",
 		"expand-files": "^0.8.4",
 		"gulp-extname": "0.2.2",
-		"handlebars": "4.0.12",
+		"handlebars": "4.4.5",
 		"handlebars-helpers": "0.10.0",
 		"imagemin-cli": "5.0.0",
 		"imagemin-cli-preserve-dir-structure": "0.0.2",

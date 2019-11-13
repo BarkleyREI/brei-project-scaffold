@@ -1,6 +1,6 @@
 {
 	"name": "brei-project-scaffold",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Client project by BarkleyREI",
 	"author": {
 		"name": "BarkleyREI"
@@ -36,7 +36,7 @@
 		"mkdirp": "^0.5.1",
 		"mocha": "5.2.0",
 		"node-dir": "0.1.17",
-		"node-sass": "4.11.0",
+		"node-sass": "4.13.0",
 		"portfinder": "^1.0.20",
 		"postcss": "7.0.6",
 		"postcss-cli": "6.0.1",

@@ -1,5 +1,7 @@
 # <%= appname %>
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/BarkleyREI/brei-project-scaffold.svg)](https://greenkeeper.io/)
+
 CMS:
 
 JIRA Project:

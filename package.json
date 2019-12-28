@@ -25,7 +25,7 @@
 		"cssnano": "~4.1.7",
 		"customizr": "~1.4.0",
 		"del": "~5.1.0",
-		"eslint": "~6.6.0",
+		"eslint": "~6.7.0",
 		"eslint-loader": "~3.0.2",
 		"expand-files": "~0.8.4",
 		"gulp-extname": "~0.2.2",

@@ -38,9 +38,9 @@ let config = {
 				{
 					loader: 'babel-loader',
 					options: {
-						presets: [
-							['es2015', { modules: false }]
-						]
+						options: {
+							presets: ['@babel/preset-env']
+						}
 					}
 				},
 				{

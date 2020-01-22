@@ -1,6 +1,6 @@
 {
 	"name": "brei-project-scaffold",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "Client project by BarkleyREI",
 	"author": {
 		"name": "BarkleyREI"
@@ -36,7 +36,7 @@
 		"eslint-loader": "~3.0.2",
 		"expand-files": "~0.8.4",
 		"gulp-extname": "~0.2.2",
-		"handlebars": "~4.5.2",
+		"handlebars": "~4.7.2",
 		"handlebars-helpers": "~0.10.0",
 		"imagemin-cli": "~5.1.0",
 		"imagemin-cli-preserve-dir-structure": "~0.0.2",
@@ -46,7 +46,7 @@
 		"node-sass": "~4.13.0",
 		"portfinder": "~1.0.20",
 		"postcss": "~7.0.6",
-		"postcss-cli": "~6.1.3",
+		"postcss-cli": "~7.1.0",
 		"postcss-loader": "~3.0.0",
 		"postcss-pxtorem": "~4.0.1",
 		"postcss-sass": "~0.4.2",

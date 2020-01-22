@@ -38,9 +38,7 @@ let config = {
 				{
 					loader: 'babel-loader',
 					options: {
-						presets: [
-							['es2015', { modules: false }]
-						]
+						presets: ['@babel/preset-env']
 					}
 				},
 				{
@@ -54,9 +52,11 @@ let config = {
 			]
 		}]
 	},
+	devtool: false,
 	plugins: [
 		new webpack.SourceMapDevToolPlugin({
-			filename: '[name].js.map'
+			filename: '[name].js.map',
+			exclude: ['vendor.js']
 		})
 	]
 };
@@ -73,7 +73,8 @@ module.exports = (env, argv) => {
 		config.optimization = {
 			minimizer: [
 				new UglifyJsPlugin({
-					cache: true
+					cache: true,
+					sourceMap: true
 				})
 			]
 		};

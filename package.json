@@ -40,7 +40,7 @@
 		"handlebars-helpers": "~0.10.0",
 		"imagemin-cli": "~5.1.0",
 		"imagemin-cli-preserve-dir-structure": "~0.0.2",
-		"mkdirp": "~0.5.1",
+		"mkdirp": "~1.0.0",
 		"mocha": "~6.2.2",
 		"node-dir": "~0.1.17",
 		"node-sass": "~4.13.0",

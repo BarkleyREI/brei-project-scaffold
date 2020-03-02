@@ -48,7 +48,7 @@
 		"postcss": "~7.0.6",
 		"postcss-cli": "~7.1.0",
 		"postcss-loader": "~3.0.0",
-		"postcss-pxtorem": "~4.0.1",
+		"postcss-pxtorem": "~5.0.0",
 		"postcss-sass": "~0.4.2",
 		"postcss-scss": "~2.0.0",
 		"postcss-sorting": "~5.0.1",

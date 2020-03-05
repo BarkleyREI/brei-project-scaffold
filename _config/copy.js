@@ -41,6 +41,7 @@ exports = module.exports = {
 			'dest': dist,
 			'src': [
 				'**',
+				'!.gitkeep',
 				'!assemble/**/*',
 				'!css/**/*',
 				'!ejs/**/*',

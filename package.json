@@ -14,7 +14,7 @@
 		"iOS >= 12"
 	],
 	"dependencies": {
-		"foundation-sites": "~6.5.1",
+		"foundation-sites": "~6.6.1",
 		"jquery": "~3.4.1",
 		"modernizr": "~3.8.0",
 		"what-input": "~5.2.6"

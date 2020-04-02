@@ -81,12 +81,6 @@ Stash Repo: <%= stashrepo %>
 - Runs Sass build task. (sass:build)
 - Runs PostCSS build task. (postcss:build)
 
-### build:img
-
-`imagemin app/img/* --out-dir=dist/img`
-
-- Runs imagemin on app/img and outputs into dist/img.
-
 ### build:js
 
 `npx webpack --config ./_config/webpack.config.js --mode=production`
@@ -136,6 +130,16 @@ Stash Repo: <%= stashrepo %>
 `customizr -c ./_config/modernizr-config.json`
 
 - Runs customizr script to produce a custom build of modernizr.js, which it places in `app/js/plugins/`
+
+### optimize
+
+`npm run optimize:img`
+
+- Runs image optimization task.
+
+### optimize:img
+
+`imagemin app`
 
 ### postcss:fixsass
 

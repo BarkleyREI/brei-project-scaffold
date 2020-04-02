@@ -46,7 +46,6 @@ exports = module.exports = {
 				'!css/**/*',
 				'!ejs/**/*',
 				'!js/**/*',
-				'!img/**/*',
 				'!scss/**/*',
 				'!components/*.html',
 				'!*.html'

@@ -22,11 +22,7 @@ exports = module.exports = {
 		{
 			'cwd': config.deploy,
 			'src': [
-				'css/**/*',
-				'js/**/*',
-				'img/**/*',
-				'components/*.html',
-				'*.html'
+				'*'
 			]
 		}
 	]

@@ -46,7 +46,8 @@ let config = {
 					options: {
 						quiet: true,
 						failOnError: true,
-						configFile: '_config/.eslintrc.json'
+						configFile: '_config/.eslintrc.json',
+						ignorePath: '_config/.eslintignore'
 					}
 				}
 			]
@@ -56,7 +57,7 @@ let config = {
 	plugins: [
 		new webpack.SourceMapDevToolPlugin({
 			filename: '[name].js.map',
-			exclude: ['vendor.js']
+			exclude: ['vendor.js', 'lib/*.js']
 		})
 	]
 };

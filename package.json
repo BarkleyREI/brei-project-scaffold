@@ -39,7 +39,6 @@
 		"handlebars": "~4.7.2",
 		"handlebars-helpers": "~0.10.0",
 		"imagemin-cli": "~5.1.0",
-		"imagemin-cli-preserve-dir-structure": "~0.0.2",
 		"mkdirp": "~0.5.1",
 		"mocha": "~7.1.0",
 		"node-dir": "~0.1.17",
@@ -86,7 +85,7 @@
 		"sass:build": "node lib/nodesass.js",
 		"sass:dist": "node lib/copy.js --css",
 		"sass:lint": "npm run postcss:fixsass && stylelint \"app/scss/**/*.scss\" --fix --cache --cache-location \"./.stylelintcache/\" --config \"./_config/.stylelintrc.json\" --ignore-path \"./_config/.stylelintignore\"",
-		"scaffold": "npm run assemble && npm run modernizr",
+		"scaffold": "npm run assemble && npm run preprocess",
 		"start": "npm run scaffold && node lib/browsersync.js",
 		"test": "mocha"
 	}

@@ -211,10 +211,10 @@ Stash Repo: <%= stashrepo %>
 
 ### scaffold
 
-`npm run assemble && npm run modernizr`
+`npm run assemble && npm run preprocess`
 
 - Runs Assemble tasks
-- Runs modernizr task
+- Runs preprocess task
 
 ### start
 

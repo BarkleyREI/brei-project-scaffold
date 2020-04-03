@@ -1,6 +1,6 @@
 {
 	"name": "brei-project-scaffold",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"description": "Client project by BarkleyREI",
 	"author": {
 		"name": "BarkleyREI"
@@ -41,7 +41,7 @@
 		"imagemin-cli": "~5.1.0",
 		"imagemin-cli-preserve-dir-structure": "~0.0.2",
 		"mkdirp": "~0.5.1",
-		"mocha": "~6.2.2",
+		"mocha": "~7.1.0",
 		"node-dir": "~0.1.17",
 		"node-sass": "~4.13.0",
 		"portfinder": "~1.0.20",

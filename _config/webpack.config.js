@@ -57,7 +57,7 @@ let config = {
 	plugins: [
 		new webpack.SourceMapDevToolPlugin({
 			filename: '[name].js.map',
-			exclude: ['vendor.js', 'lib/*.js']
+			exclude: ['vendor.js', 'lib/**.js']
 		})
 	]
 };

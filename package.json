@@ -39,7 +39,7 @@
 		"handlebars": "~4.7.2",
 		"handlebars-helpers": "~0.10.0",
 		"imagemin-cli": "~5.1.0",
-		"mkdirp": "~0.5.1",
+		"mkdirp": "~1.0.4",
 		"mocha": "~7.1.0",
 		"node-dir": "~0.1.17",
 		"node-sass": "~4.13.0",

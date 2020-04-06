@@ -14,10 +14,10 @@
 		"iOS >= 12"
 	],
 	"dependencies": {
-		"foundation-sites": "~6.5.1",
+		"foundation-sites": "~6.6.2",
 		"jquery": "~3.4.1",
-		"modernizr": "~3.8.0",
-		"what-input": "~5.2.6"
+		"modernizr": "~3.9.1",
+		"what-input": "~5.2.7"
 	},
 	"devDependencies": {
 		"@babel/core": "~7.8.3",
@@ -39,8 +39,7 @@
 		"handlebars": "~4.7.2",
 		"handlebars-helpers": "~0.10.0",
 		"imagemin-cli": "~5.1.0",
-		"imagemin-cli-preserve-dir-structure": "~0.0.2",
-		"mkdirp": "~0.5.1",
+		"mkdirp": "~1.0.4",
 		"mocha": "~7.1.0",
 		"node-dir": "~0.1.17",
 		"node-sass": "~4.13.0",
@@ -65,17 +64,18 @@
 		"assemble": "npm run clean:assemble && npm run assemble:build && npm run assemble:execute",
 		"assemble:build": "assemble default organisms --file _config/assemblefile.js",
 		"assemble:execute": "node lib/updateScss.js",
-		"build": "npm run clean:dist && npm run scaffold && npm run check && npm run build:css && npm run build:img && npm run build:js && npm run copy",
+		"build": "npm run clean:dist && npm run scaffold && npm run check && npm run build:css && npm run build:js && npm run copy",
 		"build:css": "npm run sass:build && npm run postcss:preprocess && npm run sass:dist && npm run postcss:postprocess",
-		"build:img": "imagemin-dir app/img dist/img",
 		"build:js": "npx webpack --config ./_config/webpack.config.js --mode=production",
-		"check": "eslint -c _config/.eslintrc.json app/ejs && npm run sass:lint",
+		"check": "eslint --ignore-path _config/.eslintignore -c _config/.eslintrc.json app/ejs && npm run sass:lint",
 		"clean:assemble": "node lib/del.js --assemble",
 		"clean:deploy": "node lib/del.js --deploy",
 		"clean:dist": "node lib/del.js --dist",
 		"copy": "node lib/copy.js --dist",
 		"deploy": "npm run clean:deploy && node lib/copy.js --deploy",
 		"modernizr": "customizr -c ./_config/modernizr-config.json",
+		"optimize": "npm run optimize:img",
+		"optimize:img": "imagemin app/img --out-dir=app/img",
 		"postcss:fixsass": "postcss --config _config/ -r app/scss/**/*.scss --env=scss",
 		"postcss:postprocess": "postcss --config _config/ -r dist/css/main.css --env=csspost",
 		"postcss:preprocess": "postcss --config _config/ -r app/css/main.css --env=csspre",
@@ -85,7 +85,7 @@
 		"sass:build": "node lib/nodesass.js",
 		"sass:dist": "node lib/copy.js --css",
 		"sass:lint": "npm run postcss:fixsass && stylelint \"app/scss/**/*.scss\" --fix --cache --cache-location \"./.stylelintcache/\" --config \"./_config/.stylelintrc.json\" --ignore-path \"./_config/.stylelintignore\"",
-		"scaffold": "npm run assemble && npm run modernizr",
+		"scaffold": "npm run assemble && npm run preprocess",
 		"start": "npm run scaffold && node lib/browsersync.js",
 		"test": "mocha"
 	}

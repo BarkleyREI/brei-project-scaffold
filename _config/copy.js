@@ -44,6 +44,7 @@ exports = module.exports = {
 				'!.gitkeep',
 				'!assemble/**/*',
 				'!css/**/*',
+				'!img/**/*',
 				'!ejs/**/*',
 				'!js/**/*',
 				'!scss/**/*',

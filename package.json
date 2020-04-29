@@ -1,6 +1,6 @@
 {
 	"name": "brei-project-scaffold",
-	"version": "1.0.8",
+	"version": "1.0.9",
 	"description": "Client project by BarkleyREI",
 	"author": {
 		"name": "BarkleyREI"
@@ -15,8 +15,8 @@
 	],
 	"dependencies": {
 		"foundation-sites": "~6.6.2",
-		"jquery": "~3.4.1",
-		"modernizr": "~3.10.0",
+		"jquery": "~3.5.0",
+		"modernizr": "~3.11.0",
 		"what-input": "~5.2.7"
 	},
 	"devDependencies": {
@@ -36,8 +36,16 @@
 		"eslint-loader": "~3.0.2",
 		"expand-files": "~0.8.4",
 		"gulp-extname": "~0.2.2",
-		"handlebars": "~4.7.2",
+		"handlebars": "~4.7.6",
 		"handlebars-helpers": "~0.10.0",
+		"imagemin-mozjpeg": "^8.0.0",
+		"imagemin-pngquant": "^8.0.0",
+		"imagemin-giflossy": "^5.1.10",
+		"imagemin-webp": "^5.1.0",
+		"imagemin-svgo": "^7.1.0",
+		"imagemin-jpegtran": "^6.0.0",
+		"imagemin-optipng": "^7.1.0",
+		"imagemin-gifsicle": "^7.0.0",
 		"imagemin-cli": "~5.1.0",
 		"mkdirp": "~1.0.4",
 		"mocha": "~7.1.0",
@@ -64,8 +72,9 @@
 		"assemble": "npm run clean:assemble && npm run assemble:build && npm run assemble:execute",
 		"assemble:build": "assemble default organisms --file _config/assemblefile.js",
 		"assemble:execute": "node lib/updateScss.js",
-		"build": "npm run clean:dist && npm run scaffold && npm run check && npm run build:css && npm run build:js && npm run copy",
+		"build": "npm run clean:dist && npm run scaffold && npm run check && npm run build:img && npm run build:css && npm run build:js && npm run copy",
 		"build:css": "npm run sass:build && npm run postcss:preprocess && npm run sass:dist && npm run postcss:postprocess",
+		"build:img": "node lib/imagemin.js",
 		"build:js": "npx webpack --config ./_config/webpack.config.js --mode=production",
 		"check": "eslint --ignore-path _config/.eslintignore -c _config/.eslintrc.json app/ejs && npm run sass:lint",
 		"clean:assemble": "node lib/del.js --assemble",
@@ -74,8 +83,6 @@
 		"copy": "node lib/copy.js --dist",
 		"deploy": "npm run clean:deploy && node lib/copy.js --deploy",
 		"modernizr": "customizr -c ./_config/modernizr-config.json",
-		"optimize": "npm run optimize:img",
-		"optimize:img": "imagemin app/img --out-dir=app/img",
 		"postcss:fixsass": "postcss --config _config/ -r app/scss/**/*.scss --env=scss",
 		"postcss:postprocess": "postcss --config _config/ -r dist/css/main.css --env=csspost",
 		"postcss:preprocess": "postcss --config _config/ -r app/css/main.css --env=csspre",

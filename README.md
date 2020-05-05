@@ -1,7 +1,5 @@
 # <%= appname %>
 
-
-
 CMS:
 
 JIRA Project:

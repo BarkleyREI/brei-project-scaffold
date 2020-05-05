@@ -1,6 +1,17 @@
 language: node_js
 node_js:
-  - '9'
-  - '10'
-  - '11'
-  - 'lts/*'
+- '10'
+- '11'
+- '12'
+- '13'
+- lts/*
+- node
+deploy:
+  provider: npm
+  email: nessthehero@gmail.com
+  api_key:
+    secure: e6Hwp7VQhb1gUJY0i5FpmMGIDJcKNzybRECnNs2XI7LMO219403jwq/S/XgFWtBt1xIjCPovVzzjoGqLcFWGV/5wSk6hjn4PKoK9bUtKjbBrjfah4D8EU6A9Ck7tW5WIbzKkXc486guwQM7xvKXxyGr84rLkDWt3NmnYKhv7LVHkTsAKB43Z5WQTOur+IShqzLoylvyinFNNQIH4dw09RmdT/zDcbNog4LxUJ1P4Ag2fB3il1Fd1DU7BRFxwyPYnOhctLN8oUDNpdFs42s6y/gykvgdgZ4OHf9WjjhMrWYYMxn+bYRfBtqizA9TVPkEkEw1KWiiOVUVVASOwUwXU64O/cFUmWIKXuEFzh2Nj+g3vyvrXv/5M+e+FwRZA2xTjPhcBMdXBxyphdRfiNe6deFBEzqQe1SzC92RKA3PNwEKuk9Zltn2ATJBgpYbc4JNN618DWGKmYFcFRGbvJk0apK94BpVFF6tyn9jPKRf/iu+537RoMWRMayjiNsVK5/8sq0KpeESZgWEawG4datD7eQphe1q2/w5sof4/QM6QA6S9OE/Aocs733Fx410umBGwLz2RW5EcFhehsG5axoXpZbT25I8dOzXpwmrTUJ9OE0jmErYWrDPkBjpcw2kQZEWzGXKKEf7OpmMc7Ot8kSZI+9qqhOODufRcZ3mBNm0Zbp4=
+  on:
+    tags: true
+    repo: BarkleyREI/brei-project-scaffold
+  skip_cleanup: 'true'

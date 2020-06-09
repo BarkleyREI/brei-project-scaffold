@@ -1,6 +1,6 @@
 {
 	"name": "brei-project-scaffold",
-	"version": "1.0.11",
+	"version": "1.0.12",
 	"description": "Client project by BarkleyREI",
 	"author": {
 		"name": "BarkleyREI"
@@ -95,7 +95,7 @@
 		"sass:dist": "node lib/copy.js --css",
 		"sass:lint": "npm run postcss:fixsass && stylelint \"app/scss/**/*.scss\" --fix --cache --cache-location \"./.stylelintcache/\" --config \"./_config/.stylelintrc.json\" --ignore-path \"./_config/.stylelintignore\"",
 		"scaffold": "npm run assemble && npm run modernizr",
-		"scaffold:server": "npm run assemble:server && npm run modernizr",
+		"scaffold:server": "npm run assemble:server && npm run preprocess",
 		"start": "npm run scaffold:server && node lib/browsersync.js",
 		"test": "mocha"
 	}

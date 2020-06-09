@@ -32,6 +32,10 @@ app.task('load', function (cb) {
 
 	app.option('layout', 'default.hbs');
 
+	if (typeof app.options.server !== 'undefined' && app.options.server) {
+		// Modify configuration specific to only running on the server
+	}
+
 	cb();
 });
 

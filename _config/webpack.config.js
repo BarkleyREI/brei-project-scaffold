@@ -30,6 +30,9 @@ let config = {
 		path: path.resolve(projectDir, 'app/js'),
 		filename: '[name].js'
 	},
+	externals: {
+		jquery: 'jQuery'
+	},
 	module: {
 		rules: [{
 			test: /\.js$/,

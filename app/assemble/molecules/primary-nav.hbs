@@ -1,0 +1,35 @@
+<!-- molecule:primary-nav -->
+{{#parseFixture 'default-content.json'}}
+	{{#with primary-nav}}
+
+		<nav id="primary-nav" class="primary-nav" aria-label="Primary Navigation">
+			<ul class="primary-nav__list clearfix" role="menubar">
+				{{#each this}}
+
+					<li class="primary-nav__item{{#if children}} primary-nav__item--has-children{{/if}}" role="menuitem">
+
+						{{link this}}
+
+						{{#if children}}
+
+							<ul class="primary-nav__child-list clearfix" role="menu">
+								{{#each children}}
+
+									<li class="primary-nav__child-item" role="menuitem">
+										{{link this}}
+									</li>
+
+								{{/each}}
+							</ul>
+
+						{{/if}}
+
+					</li>
+
+				{{/each}}
+			</ul>
+		</nav>
+
+	{{/with}}
+{{/parseFixture}}
+<!-- end molecule:primary-nav -->

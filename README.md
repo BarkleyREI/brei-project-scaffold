@@ -30,6 +30,8 @@ Stash Repo: <%= stashrepo %>
 
 `npm run check` - run linting tests
 
+`npm start` - run server
+
 ### Building
 
 `npm run build` - Run a plain build
@@ -48,11 +50,25 @@ Stash Repo: <%= stashrepo %>
 - Builds assemble files.
 - Executes sass reference script (updateScss.js).
 
+### assemble:server
+
+`npm run clean:assemble && npm run assemble:server-build && npm run assemble:execute`
+
+- Cleans assemble directories.
+- Builds assemble files (with server flag).
+- Executes sass reference script (updateScss.js).
+
+### assemble:server-build
+
+`assemble default organisms --file _config/assemblefile.js --option=server:true`
+
+- Runs the assemble tasks "default" and "organisms", using a provided config file. Adds a flag for a server build to allow specific actions.
+
 ### assemble:build
 
-`assemble default modules --file _config/assemblefile.js`
+`assemble default organisms --file _config/assemblefile.js`
 
-- Runs the assemble tasks "default" and "modules", using a provided config file.
+- Runs the assemble tasks "default" and "organisms", using a provided config file.
 
 ### assemble:execute
 
@@ -62,13 +78,13 @@ Stash Repo: <%= stashrepo %>
 
 ### build
 
-`npm run clean:dist && npm run scaffold && npm run check && npm run build:css && npm run build:img && npm run build:js && npm run copy`
+`npm run clean:dist && npm run scaffold && npm run check && npm run build:img && npm run build:css && npm run build:js && npm run copy`
 
 - Cleans up the dist folder.
-- Runs the assemble tasks and modernizr tasks. (scaffold) 
+- Runs the assemble server tasks and preprocessor tasks. (scaffold) 
 - Runs lint checks for SASS and ES6 (check)
-- Runs the CSS build tasks. (build:css)
 - Runs the IMG build tasks. (build:img)
+- Runs the CSS build tasks. (build:css)
 - Runs the JavaScript build tasks. (build:js)
 - Copies all the compiled HTML into the dist folder.
 
@@ -77,7 +93,9 @@ Stash Repo: <%= stashrepo %>
 `npm run sass:build && npm run postcss:preprocess && npm run sass:dist && npm run postcss:postprocess`
 
 - Runs Sass build task. (sass:build)
-- Runs PostCSS build task. (postcss:build)
+- Runs PostCSS preprocess task. (postcss:preprocess)
+- Runs Sass dist task. (sass:dist)
+- Runs PostCSS postprocess task. (postcss:postprocess)
 
 ### build:img
 
@@ -93,7 +111,7 @@ Stash Repo: <%= stashrepo %>
 
 ### check
 
-`eslint -c _config/.eslintrc.json app/ejs && npm run sass:lint`
+`eslint --ignore-path _config/.eslintignore -c _config/.eslintrc.json app/ejs && npm run sass:lint`
 
 - Runs eslint on the ejs directory.
 - Runs Sass linting tasks. (sass:lint)
@@ -145,23 +163,20 @@ Stash Repo: <%= stashrepo %>
 
 ### postcss:postprocess
 
-`postcss --config _config/ -r dist/css/main.css --env=css`
+`postcss --config _config/ -r dist/css/main.css --env=csspost`
 
-- Runs postcss script using congfiguration (_config/postcss.config.js) on css file in dist directory. This is using the css configuration. 
+- Runs postcss script using congfiguration (_config/postcss.config.js) on css file in dist directory. This is using the csspost configuration. 
 - PostCSS plugins: 
     - [postcss-pxtorem](https://github.com/cuth/postcss-pxtorem) - Converts px values to rem values.
-    - [autoprefixer](https://github.com/postcss/autoprefixer) - Adds vendor prefixes based on browser requirements.
     - [cssnano](https://github.com/cssnano/cssnano) - Minifies CSS.
 
 ### postcss:preprocess
 
-`postcss --config _config/ -r app/css/main.css --env=css`
+`postcss --config _config/ -r app/css/main.css --env=csspre`
 
-- Runs postcss script using congfiguration (_config/postcss.config.js) on css file in app directory. This is using the css configuration. 
+- Runs postcss script using congfiguration (_config/postcss.config.js) on css file in app directory. This is using the csspre configuration. 
 - PostCSS plugins: 
-    - [postcss-pxtorem](https://github.com/cuth/postcss-pxtorem) - Converts px values to rem values.
     - [autoprefixer](https://github.com/postcss/autoprefixer) - Adds vendor prefixes based on browser requirements.
-    - [cssnano](https://github.com/cssnano/cssnano) - Minifies CSS.
     
 ### preprocess
 
@@ -169,7 +184,7 @@ Stash Repo: <%= stashrepo %>
 
 - Runs CSS Preprocessing task.
 - Runs JS Preprocessing task.
-- Runs modernizr taskk.
+- Runs modernizr task.
 
 ### preprocess:css
 
@@ -198,7 +213,7 @@ Stash Repo: <%= stashrepo %>
 
 ### sass:lint
 
-`npm run postcss:fixsass && stylelint \"app/scss/**/*.scss\" --fix --cache --cache-location \"./.stylelintcache/\" --config \"./_config/.stylelintrc.json\" --ignore-path \"./_config/.stylelintignore\"`
+`npm run postcss:fixsass && stylelint "app/scss/**/*.scss" --fix --cache --cache-location "./.stylelintcache/" --config "./_config/.stylelintrc.json" --ignore-path "./_config/.stylelintignore"`
 
 - Runs Postcss Fixsass task.
 - Lints the SCSS files based on defined stylelint rules.
@@ -208,6 +223,13 @@ Stash Repo: <%= stashrepo %>
 `npm run assemble && npm run preprocess`
 
 - Runs Assemble tasks
+- Runs preprocess task
+
+### scaffold:server
+
+`npm run assemble:server && npm run preprocess`
+
+- Runs Assemble server tasks
 - Runs preprocess task
 
 ### start

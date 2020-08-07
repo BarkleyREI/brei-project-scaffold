@@ -94,7 +94,7 @@
 		"sass:build": "node lib/nodesass.js",
 		"sass:dist": "node lib/copy.js --css",
 		"sass:lint": "npm run postcss:fixsass && stylelint \"app/scss/**/*.scss\" --fix --cache --cache-location \"./.stylelintcache/\" --config \"./_config/.stylelintrc.json\" --ignore-path \"./_config/.stylelintignore\"",
-		"scaffold": "npm run assemble && npm run modernizr",
+		"scaffold": "npm run assemble && npm run preprocess",
 		"scaffold:server": "npm run assemble:server && npm run preprocess",
 		"start": "npm run scaffold:server && node lib/browsersync.js",
 		"test": "mocha"

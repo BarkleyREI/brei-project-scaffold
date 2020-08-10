@@ -1,0 +1,44 @@
+<!doctype html>
+<html class="md-no-js" lang="en">
+<head>
+
+	{{> _meta}}
+
+	<title>{{ title }}</title>
+
+	{{> _fonts}}
+
+	{{#if styles}}
+		{{#each styles}}
+			{{> (putInclude 'css' this) }}
+		{{/each}}
+	{{/if}}
+
+	{{> _js-modernizr}}
+
+</head>
+
+<body class="{{body-class}}">
+
+	{{> _svg }}
+
+	{{> _access-nav }}
+
+	<div class="container">
+
+		{{> _global-header }}
+
+		{% body %}
+
+		{{> _global-footer }}
+
+	</div>
+
+	{{#if scripts}}
+		{{#each scripts}}
+			{{> (putInclude 'js' this) }}
+		{{/each}}
+	{{/if}}
+
+</body>
+</html>

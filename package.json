@@ -1,6 +1,6 @@
 {
 	"name": "brei-project-scaffold",
-	"version": "1.0.13",
+	"version": "1.0.14",
 	"description": "Modern client project by BarkleyREI",
 	"author": {
 		"name": "BarkleyREI"
@@ -13,6 +13,9 @@
 		"IE >= 11",
 		"iOS >= 12"
 	],
+	"eslintConfig": {
+		"root": true
+	},
 	"dependencies": {
 		"foundation-sites": "~6.6.2",
 		"jquery": "~3.5.0",

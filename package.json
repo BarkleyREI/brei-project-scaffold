@@ -1,6 +1,6 @@
 {
 	"name": "brei-project-scaffold",
-	"version": "1.0.14",
+	"version": "1.0.15",
 	"description": "Modern client project by BarkleyREI",
 	"author": {
 		"name": "BarkleyREI"
@@ -28,7 +28,7 @@
 		"assemble": "~0.24.3",
 		"assemble-helpers": "~1.0.1",
 		"autoprefixer": "~9.7.1",
-		"babel-loader": "~8.0.6",
+		"babel-loader": "~8.2.2",
 		"brei-util": "^1.0.6",
 		"browser-sync": "~2.26.3",
 		"copy": "~0.3.2",
@@ -68,7 +68,7 @@
 		"stylelint-scss": "~3.13.0",
 		"stylelint-selector-bem-pattern": "~2.1.0",
 		"uglifyjs-webpack-plugin": "~2.2.0",
-		"webpack": "~4.41.5",
+		"webpack": "~4.46.0",
 		"webpack-cli": "~3.3.10"
 	},
 	"scripts": {

@@ -1,6 +1,6 @@
 {
 	"name": "brei-project-scaffold",
-	"version": "1.0.15",
+	"version": "1.0.16",
 	"description": "Modern client project by BarkleyREI",
 	"author": {
 		"name": "BarkleyREI"
@@ -10,17 +10,16 @@
 		"> 5% in US",
 		"last 2 versions",
 		"Firefox ESR",
-		"IE >= 11",
 		"iOS >= 12"
 	],
 	"eslintConfig": {
 		"root": true
 	},
 	"dependencies": {
-		"foundation-sites": "~6.6.2",
-		"jquery": "~3.5.0",
-		"modernizr": "~3.11.0",
-		"what-input": "~5.2.7"
+		"foundation-sites": "~6.6.3",
+		"jquery": "~3.6.0",
+		"modernizr": "~3.11.7",
+		"what-input": "~5.2.10"
 	},
 	"devDependencies": {
 		"@babel/core": "~7.8.3",
@@ -53,7 +52,7 @@
 		"mkdirp": "~1.0.4",
 		"mocha": "~7.1.0",
 		"node-dir": "~0.1.17",
-		"node-sass": "~4.14.0",
+		"node-sass": "~5.0.0",
 		"portfinder": "~1.0.20",
 		"postcss": "~7.0.6",
 		"postcss-cli": "~7.1.0",

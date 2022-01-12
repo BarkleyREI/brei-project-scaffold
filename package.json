@@ -1,6 +1,6 @@
 {
 	"name": "brei-project-scaffold",
-	"version": "1.0.16",
+	"version": "1.0.17",
 	"description": "Modern client project by BarkleyREI",
 	"author": {
 		"name": "BarkleyREI"
@@ -52,7 +52,7 @@
 		"mkdirp": "~1.0.4",
 		"mocha": "~7.1.0",
 		"node-dir": "~0.1.17",
-		"node-sass": "~5.0.0",
+		"node-sass": "~7.0.1",
 		"portfinder": "~1.0.20",
 		"postcss": "~7.0.6",
 		"postcss-cli": "~7.1.0",

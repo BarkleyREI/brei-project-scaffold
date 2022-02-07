@@ -16,9 +16,9 @@
 		"root": true
 	},
 	"dependencies": {
-		"foundation-sites": "~6.6.3",
+		"foundation-sites": "~6.7.4",
 		"jquery": "~3.6.0",
-		"modernizr": "~3.11.7",
+		"modernizr": "~3.11.8",
 		"what-input": "~5.2.10"
 	},
 	"devDependencies": {

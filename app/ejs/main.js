@@ -1,5 +1,3 @@
-'use strict';
-
 import { ready } from 'brei-project-utils';
 
 // Example of importing a custom module

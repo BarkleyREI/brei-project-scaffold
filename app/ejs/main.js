@@ -1,9 +1,27 @@
-const ready = () => {
+'use strict';
 
-	console.log('Hello, BarkleyREI!');
+import { ready } from 'brei-project-utils';
+
+// Example of importing a custom module
+// import { primaryNav } from './modules/primaryNav';
+
+const main = {
+
+	elem: {
+	},
+
+	init() {
+
+		this.bindUIActions();
+
+	},
+
+	bindUIActions() {
+
+	}
 
 };
 
-window.addEventListener('DOMContentLoaded', ready, false);
-
-$(document).foundation();
+ready(function () {
+	main.init();
+});

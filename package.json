@@ -1,6 +1,6 @@
 {
 	"name": "brei-project-scaffold",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "Modern client project by BarkleyREI",
 	"author": {
 		"name": "BarkleyREI"
@@ -20,7 +20,8 @@
 		"foundation-sites": "~6.7.4",
 		"jquery": "~3.6.0",
 		"modernizr": "~3.11.8",
-		"what-input": "~5.2.10"
+		"what-input": "~5.2.10",
+		"motion-ui": "~2.0.3"
 	},
 	"devDependencies": {
 		"@babel/core": "~7.17.0",
